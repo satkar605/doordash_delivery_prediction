@@ -44,20 +44,30 @@ Categorical variables (`market_id`, `order_protocol`, `store_primary_category`) 
 - Iteratively removed features with VIF > 20
 - Final selected feature set: 75+ features
 
+  ![corr](https://github.com/user-attachments/assets/f66e2a6b-1bd3-4536-a32b-1a332f90ca51)
+
+
 ### Step 3: Feature Importance
 - Trained Random Forest on filtered data
 - Ranked features by Gini importance
 - Defined three subsets: top 10, top 20, and all features
+
+![feature](https://github.com/user-attachments/assets/8fa35d8f-1b73-4729-8c57-90ab281b067b)
+
 
 ### Step 4: Model Comparison
 - Models tested: Linear, Ridge, Lasso, PLS, Decision Tree, Random Forest, XGBoost
 - Evaluated each model on each feature subset (train/test split = 80/20)
 - Metrics: Train RMSE, Test RMSE, R^2
 
+![rmse](https://github.com/user-attachments/assets/701471dc-29df-41d7-9702-1dbfb701c6d6)
+
 ### Step 5: Final Evaluation
 - Best model: **Lasso Regression** on **top_10** features
 - RMSE: ~0.28 (test)
 - Final predictions plotted vs actual values
+  
+
 
 ## Key Business Insights
 - **Model Simplicity Wins**: Simpler models (like Lasso) outperformed complex models like XGBoost due to regularization and robustness
@@ -74,20 +84,8 @@ Categorical variables (`market_id`, `order_protocol`, `store_primary_category`) 
 - Python (pandas, numpy, matplotlib, seaborn)
 - Scikit-learn
 - XGBoost
-- Cursor IDE / Jupyter Notebook
+- Jupyter Notebook
 
-## Project Structure
-```
-doordash-duration-model/
-├── data/
-│   └── historical_data.csv
-├── notebooks/
-│   └── doordash_delivery_prediction.ipynb
-├── plots/
-│   └── feature_importances.png
-│   └── model_rmse_comparison.png
-├── README.md
-```
 
 ## How to Run
 1. Open the notebook in Jupyter or Cursor IDE
