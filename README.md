@@ -88,7 +88,7 @@ Categorical variables (`market_id`, `order_protocol`, `store_primary_category`) 
 
 
 ## How to Run
-1. Open the notebook in Jupyter or Cursor IDE
+1. Open the notebook in Jupyter or any other notebook IDE
 2. Load `historical_data.csv`
 3. Follow cells step-by-step for preprocessing, modeling, and evaluation
 
